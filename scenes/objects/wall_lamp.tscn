@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs5uin2psrj45"]
+[gd_scene load_steps=6 format=3 uid="uid://cs5uin2psrj45"]
 
 [ext_resource type="Texture2D" uid="uid://deak1tpbfxbp4" path="res://graphics/objects/wall_lamp.png" id="1_f8x0w"]
 [ext_resource type="Texture2D" uid="uid://b6stkkpfikwtr" path="res://graphics/lights/textures/circle.png" id="2_gne2w"]
@@ -7,8 +7,11 @@
 radius = 25.0
 height = 250.0
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_377l3"]
-polygon = PackedVector2Array(-85, -25, -74, -10, -85, -7, -94, -4, -99, 0, -105, 5, -110, 13, -111, 17, 113, 16, 107, 7, 101, 0, 91, -6, 78, -9, 86, -25, 94, -23, 103, -19, 111, -13, 118, -7, 125, 4, 119, 19, 113, 22, 79, 21, 75, 23, 72, 23, 68, 22, -69, 21, -73, 24, -76, 23, -78, 21, -116, 20, -119, 17, -125, 3, -113, -11, -105, -18, -97, -22)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ptulj"]
+polygon = PackedVector2Array(63, -3, 63, 14, 67, 12, 67, 11, 68, 10, 68, 0, 67, -1, 67, -3, 66, -4, 64, -4)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kyrnk"]
+polygon = PackedVector2Array(-63, -3, -63, 14, -64, 14, -65, 13, -68, 10, -68, 0, -67, -1, -67, -3, -66, -4, -65, -5)
 
 [node name="WallLamp" type="StaticBody2D"]
 collision_layer = 4
@@ -34,4 +37,7 @@ shadow_filter_smooth = 2.0
 texture = ExtResource("2_gne2w")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_377l3")
+occluder = SubResource("OccluderPolygon2D_ptulj")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_kyrnk")
