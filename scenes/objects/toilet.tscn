@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbhdqaag14m6u"]
+
+[ext_resource type="PackedScene" uid="uid://bshe2jfdrysng" path="res://scenes/objects/item_container.tscn" id="1_1r1jk"]
+[ext_resource type="Script" path="res://scenes/objects/toilet.gd" id="2_cf03j"]
+[ext_resource type="Texture2D" uid="uid://c21xxyv5imqev" path="res://graphics/objects/toilet.png" id="2_o4yb1"]
+
+[node name="Toilet" instance=ExtResource("1_1r1jk")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_cf03j")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_o4yb1")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(0, 124, 12, 121, 26, 116, 37, 108, 54, 90, 68, 71, 86, 47, 94, 25, 101, -5, 101, -29, 97, -43, 91, -59, 95, -61, 101, -57, 109, -61, 118, -70, 118, -100, 114, -106, 103, -115, 95, -117, 91, -118, 90, -124, -89, -125, -92, -121, -89, -115, -96, -117, -104, -114, -114, -106, -117, -101, -118, -74, -114, -67, -109, -61, -100, -57, -93, -59, -91, -55, -98, -41, -101, -30, -100, -7, -97, 14, -87, 46, -76, 61, -63, 81, -51, 96, -32, 113, -15, 120)

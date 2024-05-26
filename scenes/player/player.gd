@@ -6,10 +6,13 @@ signal grenade_shot(grenade_pos: Vector2, direction: Vector2)
 var can_laser: bool = true
 var can_grenade: bool = true
 
+@export var max_speed: int = 500
+var speed: int = max_speed
+
 func _process(_delta):
 # movement input
 	var direction = Input.get_vector('left', 'right', 'up', 'down');
-	velocity = direction * 500
+	velocity = direction * speed
 	move_and_slide()
 	
 # rotation
@@ -19,7 +22,6 @@ func _process(_delta):
 	if Input.is_action_pressed('primary_action') and can_laser:
 		$GPUParticles2D.emitting = true
 		can_laser = false
-		position
 		$LaserTimer.start()
 		laser_shot.emit(get_projectile_position(), get_player_direction())
 # grenade

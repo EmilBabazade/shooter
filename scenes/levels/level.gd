@@ -1,11 +1,8 @@
 extends Node2D
+class_name BaseLevel
 
 var laser_scene: PackedScene = preload('res://scenes/projectiles/laser.tscn')
 var grenade_scene: PackedScene = preload('res://scenes/projectiles/grenade.tscn')
-
-func _on_gate_player_entered_gate(body):
-	print('player entered gate')
-	print(body)
 
 func _on_player_laser_shot(pos: Vector2, direction: Vector2):
 	var laser = laser_scene.instantiate() as Area2D

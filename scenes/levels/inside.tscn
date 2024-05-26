@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dio8ja0k274ex"]
+
+[ext_resource type="PackedScene" uid="uid://ch8q68sjv3bae" path="res://scenes/levels/level.tscn" id="1_f5udn"]
+[ext_resource type="PackedScene" uid="uid://dbq3k4b0yk41r" path="res://scenes/objects/box.tscn" id="2_eeuck"]
+[ext_resource type="PackedScene" uid="uid://bbhdqaag14m6u" path="res://scenes/objects/toilet.tscn" id="3_j1ini"]
+
+[node name="Inside" instance=ExtResource("1_f5udn")]
+
+[node name="Box" parent="Ground" index="0" instance=ExtResource("2_eeuck")]
+position = Vector2(229, 171)
+collision_layer = 1
+collision_mask = 1
+
+[node name="Toilet" parent="Ground" index="1" instance=ExtResource("3_j1ini")]
+position = Vector2(911, 219)

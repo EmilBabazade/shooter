@@ -21,3 +21,11 @@ texture = ExtResource("1_mbeqg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_yxije")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
